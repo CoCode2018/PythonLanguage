@@ -21,3 +21,44 @@
     3.公用模块
     4.特定类型的方法
 """
+
+# ===========内置数学工具
+# =====内置函数
+# 计算幂
+pow()
+# 计算绝对值
+abs()
+# =====内置模块
+# math、cmath、random
+
+# ==========其他数字类型
+# =====小数数字类型
+# 固定精度的浮点数
+print(0.1 + 0.1 + 0.1 - 0.3)
+from decimal import Decimal
+Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3')
+
+import decimal
+decimal.getcontext().prec = 4
+#　小数上下文管理器
+with decimal.localcontext() as ctx:
+    ctx.prec = 5
+    decimal.Decimal('1.00') / decimal.Decimal('3.00')
+
+# =====分数类型，明确保留一个分子、分母
+import fractions
+x = fractions.Fraction(1, 3)
+print(x)
+y = fractions.Fraction('1.25')
+print(y)
+(2.5).as_integer_ratio()
+z = fractions.Fraction(*(2.5).as_integer_ratio())
+
+# =====集合
+# 集合只能包含不可变对象
+
+# =====布尔型
+# bool:  True/False
+
+# 数字拓展
+# NumPy
